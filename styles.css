@@ -87,6 +87,10 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+#github {
+    font-size: 0.8em;
+}
+
 /* Botones */
 .button {
     display: inline-block;
