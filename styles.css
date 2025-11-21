@@ -1,0 +1,255 @@
+/*
+    Estilos CSS Básicos para un Portafolio Sencillo
+    Guarda este archivo como 'styles.css'
+*/
+
+/* 1. Reset Básico y Variables */
+:root {
+    --primary-color: #3498db; /* Azul llamativo */
+    --secondary-color: #2c3e50; /* Gris oscuro para texto/fondo */
+    --background-light: #ecf0f1; /* Gris claro */
+    --text-dark: #333;
+    --text-light: #fff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* 2. Barra de Navegación */
+header {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: 10px 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+    float: left;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    float: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* 3. Sección Hero/Inicio */
+.hero {
+    background: var(--text-light);
+    color: var(--text-dark);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero .tagline {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: 700;
+}
+
+.button:hover {
+    background: #2980b9; /* Un azul un poco más oscuro */
+}
+
+.button-small {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    font-size: 0.9em;
+}
+
+.button-small:hover {
+    background: var(--primary-color);
+}
+
+/* 4. Sección de Trabajos */
+.trabajos {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--background-light);
+}
+
+.trabajos h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+/* MODIFICACIÓN: Haz que cada trabajo ocupe el ancho completo */
+.trabajos-grid {
+    display: block; /* Cambiamos de grid a block para que se apilen */
+    gap: 0; /* Ya no necesitamos el espacio del grid */
+}
+
+/* Agrega un margen inferior para separar los trabajos */
+.trabajo-item {
+    /* [Mantiene los estilos existentes, pero agrega esto:] */
+    margin-bottom: 30px; /* Separación entre cada trabajo */
+    padding: 25px; /* Quizás un poco más de padding */
+}
+
+.trabajo-item {
+    background: var(--text-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.trabajo-item:hover {
+    transform: translateY(-5px);
+}
+
+.trabajo-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+.trabajo-item p {
+
+    text-align: center;
+
+}
+.trabajo-item img {
+    max-width: 600px; /* Define un ancho máximo para la imagen (o el que desees) */
+    width: 100%; /* Asegura que no exceda el contenedor, pero permite que sea más pequeña */
+    height: auto;
+    margin: 15px auto; /* <-- CAMBIO CLAVE: Centra horizontalmente y da margen vertical */
+    display: block; /* <-- Asegúrate de que sea un elemento de bloque */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.trabajo-item .descripcion {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+.integrantes-text
+{
+    font-size: 0.9em;
+    font-weight: bold
+}
+
+/* 5. Pie de Página/Contacto */
+footer {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h4 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.copy {
+    margin-top: 20px !important;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* Separador Horizontal */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+}
+
+/* Media Query para hacerlo Responsivo */
+@media (max-width: 768px) {
+    header h1, header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
